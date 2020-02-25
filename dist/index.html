@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--endbuild-->
+    <title>Currency Converter JS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Currency Converter</h1>
+      </header>
+      <div class="date">2020.02.25.</div>
+      <ul class="currencies">
+        <li class="currency base-currency" id="USD">
+          <img
+            src="http://www.geonames.org/flags/l/us.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#36;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">USD - US Dollar</p>
+            <p class="currency__info--base-currency-rate">1 EUR = 1.1200 USD</p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency" id="JPY">
+          <img
+            src="http://www.geonames.org/flags/l/jp.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#165;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">JPY - Japanese Yen</p>
+            <p class="currency__info--base-currency-rate">
+              1 USD = 111.1200 JPY
+            </p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency base-currency" id="USD">
+          <img
+            src="http://www.geonames.org/flags/l/us.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#36;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">USD - US Dollar</p>
+            <p class="currency__info--base-currency-rate">1 EUR = 1.1200 USD</p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency" id="JPY">
+          <img
+            src="http://www.geonames.org/flags/l/jp.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#165;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">JPY - Japanese Yen</p>
+            <p class="currency__info--base-currency-rate">
+              1 USD = 111.1200 JPY
+            </p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency base-currency" id="USD">
+          <img
+            src="http://www.geonames.org/flags/l/us.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#36;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">USD - US Dollar</p>
+            <p class="currency__info--base-currency-rate">1 EUR = 1.1200 USD</p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency" id="JPY">
+          <img
+            src="http://www.geonames.org/flags/l/jp.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#165;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">JPY - Japanese Yen</p>
+            <p class="currency__info--base-currency-rate">
+              1 USD = 111.1200 JPY
+            </p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency base-currency" id="USD">
+          <img
+            src="http://www.geonames.org/flags/l/us.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#36;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">USD - US Dollar</p>
+            <p class="currency__info--base-currency-rate">1 EUR = 1.1200 USD</p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency" id="JPY">
+          <img
+            src="http://www.geonames.org/flags/l/jp.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#165;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">JPY - Japanese Yen</p>
+            <p class="currency__info--base-currency-rate">
+              1 USD = 111.1200 JPY
+            </p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency base-currency" id="USD">
+          <img
+            src="http://www.geonames.org/flags/l/us.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#36;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">USD - US Dollar</p>
+            <p class="currency__info--base-currency-rate">1 EUR = 1.1200 USD</p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+        <li class="currency" id="JPY">
+          <img
+            src="http://www.geonames.org/flags/l/jp.gif"
+            class="currency__flag"
+          />
+          <div class="currency__info">
+            <p class="currency__info--input">
+              <span class="currency__info--symbol">&#165;</span
+              ><input type="number" placeholder="0.000000" />
+            </p>
+            <p class="currency__info--name">JPY - Japanese Yen</p>
+            <p class="currency__info--base-currency-rate">
+              1 USD = 111.1200 JPY
+            </p>
+          </div>
+          <span class="currency__close">&times;</span>
+        </li>
+      </ul>
+      <button class="add-currency-btn">
+        <i class="fas fa-long-arrow-alt-left"></i> Add Currency
+      </button>
+      <ul class="add-currency-list">
+        <li data-currency="USD" class="disabled">
+          <img src="http://www.geonames.org/flags/l/us.gif" class="flag" /><span
+            >USD - US Dollar</span
+          >
+        </li>
+        <li data-currency="USD">
+          <img src="http://www.geonames.org/flags/l/us.gif" class="flag" /><span
+            >USD - US Dollar</span
+          >
+        </li>
+        <li data-currency="USD">
+          <img src="http://www.geonames.org/flags/l/us.gif" class="flag" /><span
+            >USD - US Dollar</span
+          >
+        </li>
+        <li data-currency="USD">
+          <img src="http://www.geonames.org/flags/l/us.gif" class="flag" /><span
+            >USD - US Dollar</span
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!--build:js js/main.min.js -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

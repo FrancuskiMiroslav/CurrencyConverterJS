@@ -1,0 +1,184 @@
+@import "components/vars";
+@import "components/mixins";
+@import "components/print";
+
+@include main;
+
+body {
+  @include background($home-image);
+}
+
+.container {
+  @include wrapper(500, 0);
+  color: #ffffff;
+  text-align: center;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  position: relative;
+  user-select: none;
+
+  .header {
+    background-color: $primaryColor;
+    padding: 10px;
+    color: $secondaryColor;
+  }
+
+  .date {
+    background-color: $secondaryColor;
+    padding: 5px;
+    color: $primaryColor;
+  }
+
+  .currencies {
+    height: calc(100vh - 145px);
+    background-color: rgba($color: $primaryColor, $alpha: 0.2);
+    padding: 10px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: $secondaryColor, $alpha: 0.5);
+    }
+
+    .currency {
+      background-color: lighten($color: $primaryColor, $amount: 10);
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__info {
+        display: inline-block;
+        vertical-align: top;
+        width: 70%;
+        text-align: left;
+
+        &--input {
+          display: flex;
+          font-size: 22px;
+          width: 80%;
+          align-items: center;
+          height: 40px;
+          border: 2px solid #ffffff;
+          padding: 8px;
+          margin-bottom: 5px;
+
+          input {
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            padding: 8px;
+          }
+        }
+
+        &--symbol {
+          font-size: 20px;
+          display: inline-block;
+          width: 60px;
+          text-align: center;
+        }
+      }
+
+      &__flag {
+        width: 60px;
+        height: 40px;
+        border: 1px solid #ffffff;
+      }
+
+      &__close {
+        vertical-align: top;
+        cursor: pointer;
+        &:hover {
+          color: lighten($color: $secondaryColor, $amount: 10);
+        }
+      }
+    }
+
+    .base-currency {
+      background-color: darken($color: $primaryColor, $amount: 10);
+    }
+  }
+
+  .add-currency-btn {
+    @include btn;
+    width: 100%;
+    margin: 0;
+    transition: background-color 0.25s;
+    position: relative;
+
+    &.open {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+
+      svg {
+        opacity: 1;
+        bottom: 50%;
+        transform: translateY(50%) rotate(90deg);
+      }
+    }
+
+    &.open + .add-currency-list {
+      height: calc(100vh - 145px);
+    }
+
+    svg {
+      position: absolute;
+      font-size: 30px;
+      left: 15px;
+      bottom: 0%;
+      transform: translateY(0%) rotate(90deg);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  .add-currency-list {
+    text-align: left;
+    position: absolute;
+    bottom: 58px;
+    left: 0;
+    background-color: rgba($color: $primaryColor, $alpha: 0.95);
+    width: 100%;
+    height: 0;
+    overflow: auto;
+    transition: all 0.3s;
+
+    li {
+      padding: 15px;
+      border-bottom: 1px solid #ffffff;
+
+      &:hover,
+      &:focus {
+        background-color: $secondaryColor;
+        opacity: 1;
+      }
+
+      span {
+        font-weight: bold;
+        margin-left: 15px;
+      }
+    }
+
+    .disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .flag {
+      width: 60px;
+      height: 40px;
+      border: 1px solid #ffffff;
+      vertical-align: middle;
+    }
+  }
+}
